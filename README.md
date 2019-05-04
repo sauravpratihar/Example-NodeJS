@@ -20,5 +20,5 @@ Protected Route, need access-token in header
 | ------ | ------ | ------ | ------ | 
 | /thumbnail | GET | url | Yes | No |
 
-#### localhost:8000/public/login_user endpoint return jwt token
-#### protected routes need access-token in header to access protected content
+#### Note: localhost:8000/public/login_user endpoint return jwt token
+#### Note: protected routes need access-token in header to access protected content
