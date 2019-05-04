@@ -27,17 +27,9 @@ protectedRoute.use(FUNCTIONS.protectedRouteConf)
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')))
 app.use('/static', express.static(path.join(__dirname, 'static')))
 
-
-
-// app.use(bodyParser.json({limit: '50mb'}));
-// app.use(bodyParser.urlencoded({limit: '50mb', extended: false, parameterLimit: 10000000 }))
-// app.use(express.bodyParser());
-
 mongoose.Promise = require('bluebird')
 mongoose.connect(config.database, {useNewUrlParser: true})
   .catch(err => console.error(err))
-
-
 
 app.listen(config.port, '0.0.0.0', () => {
     console.log('Your server is running on ' + config.port)

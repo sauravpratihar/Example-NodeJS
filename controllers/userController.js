@@ -118,7 +118,6 @@ deleteUsers = (req, res) => {
         else {
             userModel.findByIdAndDelete(params.user_id)
                 .then(data => {
-                    console.log(data)
                     res.send({
                         message: 'user deleted',
                         response_code: 200
@@ -160,7 +159,7 @@ loginUser = (req, res) => {
                             });
                         }
                         else {
-                            res.status(500).send({
+                            res.status(403).send({
                                 message: 'Wrong password',
                                 response_code: 403
                             });
