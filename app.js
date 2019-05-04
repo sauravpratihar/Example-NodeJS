@@ -8,11 +8,12 @@ const router = require('./routes')
 const config = require('./config')
 const FUNCTIONS = require('./functions');
 require("dotenv").config();
+const fileUpload = require('express-fileupload');
 
 const app = express()
 const publicRoute = express.Router()
 const protectedRoute = express.Router();
-
+app.use(fileUpload());
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 app.use(morgan('dev'))

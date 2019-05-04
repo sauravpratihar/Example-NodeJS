@@ -1,6 +1,6 @@
 
 module.exports = function (publicRoute, protectedRoute) {
-    require('./routes/testRoute')(publicRoute, protectedRoute)
+    require('./routes/imageRoute')(publicRoute, protectedRoute)
     require('./routes/userRoute')(publicRoute, protectedRoute)
     // employeeRoute(apiRoutes)
    
